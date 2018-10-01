@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{223B99FB-44EB-4DD9-8189-A89C23C61348}</ProjectGuid>
+    <ProjectGuid>{00C2652B-FBD6-4146-870D-A4AB72FB87DC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_2darrayds</RootNamespace>
-    <AssemblyName>2darrayds</AssemblyName>
+    <RootNamespace>maxarraysum</RootNamespace>
+    <AssemblyName>maxarraysum</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

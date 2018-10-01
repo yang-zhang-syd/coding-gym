@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{223B99FB-44EB-4DD9-8189-A89C23C61348}</ProjectGuid>
+    <ProjectGuid>{93A38B1E-34CA-4318-8C7B-6F1DE8681EA1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_2darrayds</RootNamespace>
-    <AssemblyName>2darrayds</AssemblyName>
+    <RootNamespace>ransomnote</RootNamespace>
+    <AssemblyName>ransomnote</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

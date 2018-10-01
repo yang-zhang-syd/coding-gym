@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{223B99FB-44EB-4DD9-8189-A89C23C61348}</ProjectGuid>
+    <ProjectGuid>{A422B5DD-C332-4BD7-A4EA-90C55D1541F2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_2darrayds</RootNamespace>
-    <AssemblyName>2darrayds</AssemblyName>
+    <RootNamespace>abbreviation</RootNamespace>
+    <AssemblyName>abbreviation</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
