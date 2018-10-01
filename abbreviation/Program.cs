@@ -19,6 +19,8 @@ class Solution
     {
         int aStartIdx = 0;
         int bStartIdx = 0;
+        int aEndIdx = a.Length - 1;
+        int bEndIdx = b.Length - 1;
 
         if (a.Length == 0)
         {
@@ -45,15 +47,36 @@ class Solution
             {
                 return true;
             }
-
-            if (aStartIdx == a.Length && bStartIdx != b.Length)
+            
+            if (aStartIdx == a.Length)
             {
-                return false;
+                return canConvertFromAToB("", b.Substring(bStartIdx));
             }
 
-            if (aStartIdx != a.Length && bStartIdx == b.Length)
+            if (bStartIdx == b.Length)
             {
                 return canConvertFromAToB(a.Substring(aStartIdx), "");
+            }
+        }
+
+        while (a[aEndIdx] == b[bEndIdx])
+        {
+            aEndIdx--;
+            bEndIdx--;
+
+            if (aEndIdx == -1 && bEndIdx == -1)
+            {
+                return true;
+            }
+
+            if (aEndIdx == -1)
+            {
+                return canConvertFromAToB("", b.Substring(bStartIdx, bEndIdx - bStartIdx + 1));
+            }
+
+            if (bEndIdx == -1)
+            {
+                return canConvertFromAToB(a.Substring(aStartIdx, aEndIdx - aStartIdx + 1), "");
             }
         }
 
@@ -61,11 +84,11 @@ class Solution
 
         if (char.ToUpper(a[aStartIdx]) == b[bStartIdx])
         {
-            return canConvertFromAToB(a.Substring(aStartIdx + 1), b.Substring(bStartIdx + 1)) ||
-                   canConvertFromAToB(a.Substring(aStartIdx + 1), b.Substring(bStartIdx));
+            return canConvertFromAToB(a.Substring(aStartIdx + 1, aEndIdx - aStartIdx), b.Substring(bStartIdx + 1, bEndIdx - bStartIdx)) ||
+                   canConvertFromAToB(a.Substring(aStartIdx + 1, aEndIdx - aStartIdx), b.Substring(bStartIdx, bEndIdx - bStartIdx + 1));
         }
 
-        return canConvertFromAToB(a.Substring(aStartIdx + 1), b.Substring(bStartIdx));
+        return canConvertFromAToB(a.Substring(aStartIdx + 1, aEndIdx - aStartIdx), b.Substring(bStartIdx, bEndIdx - bStartIdx + 1));
     }
 
     // Complete the abbreviation function below.
